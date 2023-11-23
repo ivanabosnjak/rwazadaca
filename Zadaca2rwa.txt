@@ -1,0 +1,129 @@
+Zadaca 2
+Ivana Bošnjak
+
+2.1 a) Moj preglednik pokrece HTTP verziju 1.1
+
+HTTP/1.1 304 Not Modified
+Date: Sat, 18 Nov 2023 17:20:47 GMT
+Server: Apache
+Connection: close
+ETag: "8a9-291e721905000"
+b) Moj preglednik pokrece HTTP verziju 1.1
+
+HTTP/1.1 200 OK
+Date: Sat, 18 Nov 2023 17:21:50 GMT
+Server: Apache/2.4.29 (Ubuntu)
+ETag: "99e76-4m5lN+8TCEhAfSp8Nwerol3mY30"
+Content-Type: text/html; charset=utf-8
+Accept-Ranges: none
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+c) Moj preglednik pokazuje da moze prihvatiti posluzitelju sljedece jezike: hrvatski, engleski, engleski 
+(Ujedinjeno Kraljevstvo), engleski (Sjedinjene Americke Drzave), ruski.
+GET /hypertext/WWW/TheProject.html HTTP/1.1
+Accept: 
+text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,applicatio
+n/signed-exchange;v=b3;q=0.7 
+Accept-Encoding: gzip, deflate
+Accept-Language: hr,en;q=0.9,en-GB;q=0.8,en-US;q=0.7,ru;q=0.6
+Cache-Control: max-age=0
+Connection: keep-alive
+Host: info.cern.ch
+If-Modified-Since: Thu, 03 Dec 1992 08:37:20 GMT
+If-None-Match: "8a9-291e721905000"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) 
+Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0
+d)
+IP adresa mog racunala :
+IPv6 Address. . . . . . . . . . . : fdec:753e:ad4f:af00:af36:a974:4985:508e
+IP adresa sum.ba:
+212.39.111.33
+e) HTML datoteka koju dohvaæam zadnji put je modificirana na poslužitelju: Thu, 03 Dec 1992 
+08:37:20 GMT
+Date: Sat, 18 Nov 2023 18:20:59 GMT
+Server: Apache
+Last-Modified: Thu, 03 Dec 1992 08:37:20 GMT
+ETag: "8a9-291e721905000"
+Accept-Ranges: bytes
+Content-Length: 2217
+Connection: close
+Content-Type: text/html
+f)U moj preglednik se vraca 2217 bajtova sadrzaja.
+
+Date: Sat, 18 Nov 2023 18:20:59 GMT
+Server: Apache
+Last-Modified: Thu, 03 Dec 1992 08:37:20 GMT
+ETag: "8a9-291e721905000"
+Accept-Ranges: bytes
+Content-Length: 2217
+Connection: close
+Content-Type: text/html
+g)
+Server je Apache
+
+HTTP/1.1 304 Not Modified
+Date: Sat, 18 Nov 2023 18:54:02 GMT
+Server: Apache
+Connection: close
+ETag: "8a9-291e721905000"
+h)
+Moj preglednik moze prihvatiti sljedece jezike:
+
+hrvatski
+engleski
+engleski (Ujedinjeno Kraljevstvo)
+engleski (Sjedinjene Amerièke Države)
+ruski
+2.2
+a)
+MIME format resursa: application/pdf
+Velièina resursa: Size: 747.88 kb
+Verzija HTTP poslužitelja: HTTP/1.1
+
+HTTP/1.1 200 OK
+Date: Sat, 18 Nov 2023 19:19:28 GMT
+Server: Apache/2.4.29 (Ubuntu)
+Cache-Control: no-cache, private
+Transfer-Encoding: chunked
+Content-Type: application/pdf
+b)
+MIME format resursa: image/png
+Velièina resursa: Size: 15.32 kb
+Verzija HTTP poslužitelja: HTTP/1.1
+
+
+Server: nginx/1.14.0 (Ubuntu)
+Date: Sat, 18 Nov 2023 19:32:12 GMT
+Content-Type: image/png
+Content-Length: 15684
+Connection: keep-alive
+Set-Cookie: MoodleSession=961jdqei0epj0e83e5d1e3dvju; path=/moodle/; secure; SameSite=None
+Content-Disposition: inline; filename="Logo sumarum.png"
+Cache-Control: public, max-age=5184000, no-transform
+Expires: Wed, 17 Jan 2024 19:32:12 GMT
+Pragma: 
+Accept-Ranges: bytes
+Last-Modified: Mon, 30 Oct 2023 08:30:25 GMT
+c)
+MIME format resursa: text/plain
+Velièina resursa: Size: 1.06 kb
+Verzija HTTP poslužitelja: HTTP/1.1
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sat, 18 Nov 2023 19:35:09 GMT
+Content-Type: text/plain
+Last-Modified: Mon, 14 Mar 2011 13:57:15 GMT
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src https:
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=15768001
+Content-Encoding: gzip
