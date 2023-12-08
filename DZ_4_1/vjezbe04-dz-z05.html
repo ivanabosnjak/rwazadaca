@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body>
+ <script type="text/javascript">
+const osoba = {
+firstName:"Marko", lastName:"Maric", age:40, eyeColor:"black"
+};
+const osoba2 = {
+firstName:"Ana", lastName:"Antic", age:30, hairColor:"blonde"
+};
+const osoba3 = {
+firstName:"Ante", lastName:"Markovic", age:20, occupation:"student"
+};
+let tekst = "";
+for (let indeks in osoba) {
+  tekst += indeks + ": " + osoba[indeks] + "<br>";
+  }
+document.write(tekst + "<br>");
+ tekst = "";
+for (let indeks in osoba2) {
+  tekst += indeks + ": " + osoba2[indeks] + "<br>";
+  }
+  document.write(tekst + "<br>");
+ tekst = "";
+for (let indeks in osoba3) {
+  tekst += indeks + ": " + osoba3[indeks] + "<br>";
+  }
+document.write(tekst);
+
+
+ </script>
+</body>
+</html>
