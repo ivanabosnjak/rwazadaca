@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Izračun Godina</title>
+    <script>
+        function dodajVodecuNulu(vrijednost) {
+            return vrijednost < 10 ? '0' + vrijednost : vrijednost;
+        }
+
+        function izracunajGodine() {
+            var dan = parseInt(document.getElementById('dan').value, 10);
+            var mjesec = parseInt(document.getElementById('mjesec').value, 10);
+            var godina = parseInt(document.getElementById('godina').value, 10);
+
+            var danas = new Date();
+            var rodjendan = new Date(godina, mjesec - 1, dan);
+
+            var razlikaGodina = danas.getFullYear() - rodjendan.getFullYear();
+
+            if (
+                danas.getMonth() < rodjendan.getMonth() ||
+                (danas.getMonth() === rodjendan.getMonth() && danas.getDate() < rodjendan.getDate())
+            ) {
+                razlikaGodina--;
+            }
+
+            alert('Imate ' + razlikaGodina + ' godina.');
+        }
+    </script>
+</head>
+<body>
+
+    <form>
+        <label for="dan">Unesite dan (01-31)</label>
+        <input type="text" id="dan" name="dan" required> <br/><br/>
+
+        <label for="mjesec">Unesite mjesec (01-12)</label>
+        <input type="text" id="mjesec" name="mjesec" required><br/><br/>
+
+        <label for="godina">Unesite godinu (npr. 1970)</label>
+        <input type="text" id="godina" name="godina" required><br/><br/>
+
+        <button type="button" onclick="izracunajGodine()">Izračunaj</button>
+    </form>
+
+</body>
+</html>

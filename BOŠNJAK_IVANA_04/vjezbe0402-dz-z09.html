@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>zadaca</title>
+    <style>
+        
+        #zarulja {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+        }
+
+        #zarulja img{
+            width: 100%;
+            height: 100%;
+        }
+		#prekidac {
+            width: 100px;
+            height: 150px;
+            display: inline-block;
+        }
+
+        #prekidac img{
+            width: 100%;
+            height: 100%;
+        }
+
+        #prekidac {
+            cursor: pointer;
+            float: left;
+        }
+    </style>
+    <script>
+        function promijeniStanje() {
+            var prekidac = document.getElementById('prekidac');
+            var zarulja = document.getElementById('zarulja');
+
+            if (prekidac.src.includes('on-removebg-preview.png')) {
+                zarulja.innerHTML = '<img src="zarulja_off_2.png" alt="ugasena_zarulja">';
+                prekidac.src = "off-removebg-preview.png";
+            } else {
+                zarulja.innerHTML = '<img src="zarulja_on_2.png" alt="upaljena_zarulja">';
+                prekidac.src = "on-removebg-preview.png";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="zarulja">
+        <img src="zarulja_off_2.png" alt="ugasena_zarulja">
+    </div>
+
+    <img id="prekidac" src="off-removebg-preview.png" alt="Prekidač" onclick="promijeniStanje()">
+
+</body>
+</html>

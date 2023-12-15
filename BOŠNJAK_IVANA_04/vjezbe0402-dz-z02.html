@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>zadaca</title>
+    <script>
+        function promijeniPozadinu() {
+
+            var novaBoja = '#' + Math.floor(Math.random()*16777215).toString(16);
+            
+            document.body.style.backgroundColor = novaBoja;
+
+            document.getElementById("trenutnaBoja").innerHTML = "Trenutna boja: " + novaBoja;
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Promijeni Pozadinu</h1>
+    
+    <button onclick="promijeniPozadinu()">Promijeni pozadinu</button>
+
+    <div id="trenutnaBoja"></div>
+
+</body>
+</html>

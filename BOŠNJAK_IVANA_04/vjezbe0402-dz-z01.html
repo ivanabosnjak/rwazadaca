@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8" />
+    <title>zadaca</title>
+
+    <script type="text/javascript">
+        function izracunaj() {
+            var unosBrojeva = prompt("Unesite skup brojeva odvojenih zarezom (npr. 1, 4, 16):");
+
+            var nizBrojeva = unosBrojeva.split(',').map(function (broj) {
+                return parseInt(broj.trim(), 10);
+            });
+
+            var aritmetickaSredina = nizBrojeva.reduce(function (zbroj, broj) {
+                return zbroj + broj;
+            }, 0) / nizBrojeva.length;
+
+            var geometrijskaSredina = Math.pow(nizBrojeva.reduce(function (umnozak, broj) {
+                return umnozak * broj;
+            }, 1), 1 / nizBrojeva.length);
+
+            document.getElementById("rezultat").innerHTML = "Aritmetička sredina: " + aritmetickaSredina.toFixed(2) +
+                                                            "<br>Geometrijska sredina: " + geometrijskaSredina.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Izračun Aritmetičke i Geometrijske Sredine</h1>
+    
+    <button onclick="izracunaj()">Izračunaj</button>
+
+    <div id="rezultat"></div>
+</body>
+</html>

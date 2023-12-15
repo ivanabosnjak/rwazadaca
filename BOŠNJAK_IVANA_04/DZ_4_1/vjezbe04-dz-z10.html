@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 
+function proizvoljniBrojevi(min, max) {
+  return Math.floor((Math.random() * (max - min + 1)) + min);
+}
+
+for (let i = 0; i < 5; i++) {
+  const broj = proizvoljniBrojevi(50, 100);
+  document.write(broj + "<br>");
+}
+
+ </script>
+</body>
+</html>

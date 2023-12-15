@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 
+function ispisSavrsenihBrojeva(a) {
+  for (let i = 1; i <= a; i++) {
+    if (jeSavrsenBroj(i)) {
+      document.write(i + "<br>");
+    }
+  }
+}
+
+function jeSavrsenBroj(broj) {
+  let zbroj = 0;
+  for (let j = 1; j < broj; j++) {
+    if (broj % j == 0) {
+      zbroj += j;
+    }
+	}
+	return zbroj == broj;
+}
+
+ispisSavrsenihBrojeva(100);
+ </script>
+</body>
+</html>

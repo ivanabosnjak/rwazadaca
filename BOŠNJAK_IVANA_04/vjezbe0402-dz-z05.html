@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>zadaca</title>
+    <script>
+        function validirajRegistarskuOznaku(oznaka) {
+            var regex = /^[AETJOMK]{1}\d{2}-[AETJOMK]{1}-\d{3}$/;
+            return regex.test(oznaka);
+        }
+
+        function validirajIObavijesti() {
+            var unesenaOznaka = document.getElementById("registarskaOznaka").value;
+            var rezultatValidacije = validirajRegistarskuOznaku(unesenaOznaka);
+
+            if (rezultatValidacije) {
+                alert("Registarska oznaka je ispravna.");
+            } else {
+                alert("Registarska oznaka nije ispravna.");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Validacija Registarske Oznake</h1>
+
+    <form>
+        <label for="registarskaOznaka">Unesite BIH registarsku oznaku (format:"X00 – X – 000"): </label>
+        <input type="text" id="registarskaOznaka" name="registarskaOznaka" required>
+        <button type="button" onclick="validirajIObavijesti()">Validiraj</button>
+    </form>
+
+</body>
+</html>

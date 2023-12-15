@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>zadaca</title>
+    <script>
+        function provjeriOcijenu() {
+            var unosOcjene = document.getElementById("ocjena").value;
+
+            var ocjenaBroj = parseInt(unosOcjene);
+
+            if (!isNaN(ocjenaBroj) && ocjenaBroj >= 1 && ocjenaBroj <= 5) {
+                // Prikaz ocjene u alert dijalogu
+                alert("Ocjena: " + ocjenaBroj + " - " + ocjenaTekst(ocjenaBroj));
+            } else {
+                alert("Unesite ocjenu od 1 do 5.");
+            }
+        }
+        function ocjenaTekst(ocjena) {
+            switch (ocjena) {
+                case 1:
+                    return "Nedovoljan";
+                case 2:
+                    return "Dovoljan";
+                case 3:
+                    return "Dobar";
+                case 4:
+                    return "Vrlo dobar";
+                case 5:
+                    return "Odličan";
+                default:
+                    return "Krivi unos";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Unos ocjene</h1>
+
+    <form>
+        <label for="ocjena">Unesite ocjenu (1-5): </label>
+        <input type="text" id="ocjena" name="ocjena" maxlength="1" pattern="[1-5]" required>
+        <button type="button" onclick="provjeriOcijenu()">Provjeri ocjenu</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>zadaca</title>
+    <style>
+        input {
+            margin-bottom: 10px;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function zbroji() {
+            var broj1 = parseFloat(document.getElementById("broj1").value);
+            var broj2 = parseFloat(document.getElementById("broj2").value);
+
+            var rezultat = broj1 + broj2;
+
+            document.getElementById("rezultat").value = rezultat;
+        }
+    </script>
+</head>
+<body>
+
+
+    <form>
+        <label for="broj1">X = </label>
+        <input type="text" id="broj1" name="broj1" required> <br/>
+
+        <label for="broj2">Y = </label>
+        <input type="text" id="broj2" name="broj2" required> <br/>
+
+        <button type="button" onclick="zbroji()">Zbroji</button> <br/> <br/>
+
+        <hr>
+
+        <label for="rezultat">REZULTAT = </label>
+        <input type="text" id="rezultat" name="rezultat" readonly>
+    </form>
+
+</body>
+</html>
+

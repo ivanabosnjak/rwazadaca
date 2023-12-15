@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>zadaca</title>
+    <script>
+        function izracunaj(operator) {
+            var broj1 = parseFloat(document.getElementById('broj1').value);
+            var broj2 = parseFloat(document.getElementById('broj2').value);
+
+            if (isNaN(broj1) || isNaN(broj2)) {
+                alert("Krivi unos");
+                return;
+            }
+
+            var rezultat;
+
+            switch (operator) {
+                case 'zbrajanje':
+                    rezultat = broj1 + broj2;
+                    break;
+                case 'oduzimanje':
+                    rezultat = broj1 - broj2;
+                    break;
+                case 'mnozenje':
+                    rezultat = broj1 * broj2;
+                    break;
+                case 'dijeljenje':
+                    rezultat = broj1 / broj2;
+                    break;
+                case 'sinus':
+                    rezultat = Math.sin(broj1);
+                    break;
+                case 'kosinus':
+                    rezultat = Math.cos(broj1);
+                    break;
+                case 'tangens':
+                    rezultat = Math.tan(broj1);
+                    break;
+                case 'logaritam':
+                    rezultat = Math.log(broj1);
+                    break;
+                case 'logaritamBaza10':
+                    rezultat = Math.log10(broj1);
+                    break;
+                case 'kvadriranje':
+                    rezultat = Math.pow(broj1, 2);
+                    break;
+                case 'kubiranje':
+                    rezultat = Math.pow(broj1, 3);
+                    break;
+                case 'potenciranje':
+                    rezultat = Math.pow(broj1, broj2);
+                    break;
+                default:
+                    alert('Nepoznata operacija.');
+                    return;
+            }
+
+            alert("Rezultat: " + rezultat);
+        }
+    </script>
+</head>
+<body>
+
+    <input type="text" id="broj1" required>
+	<label for="broj1">operand1</label> <br/><br/>
+
+    <input type="text" id="broj2" required>
+	<label for="broj2">operand2</label> <br/><br/>
+
+    <button onclick="izracunaj('zbrajanje')">+</button>
+    <button onclick="izracunaj('oduzimanje')">-</button>
+    <button onclick="izracunaj('mnozenje')">*</button>
+    <button onclick="izracunaj('dijeljenje')">/</button> <br/><br/>
+    <button onclick="izracunaj('sinus')">sin</button>
+    <button onclick="izracunaj('kosinus')">cos</button>
+    <button onclick="izracunaj('tangens')">tan</button> <br/><br/>
+    <button onclick="izracunaj('logaritam')">ln</button>
+    <button onclick="izracunaj('logaritamBaza10')">log</button> <br/><br/>
+    <button onclick="izracunaj('kvadriranje')">^2</button>
+    <button onclick="izracunaj('kubiranje')">^3</button>
+    <button onclick="izracunaj('potenciranje')">^n</button>
+
+</body>
+</html>
+
